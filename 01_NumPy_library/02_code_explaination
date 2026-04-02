@@ -1,0 +1,83 @@
+#  Introduction of NumPy
+# NumPy = Numerical Python
+# It is an open-source Python library used for scientific calculations
+# Python list → heterogeneous (different data types)
+# NumPy array → homogeneous (same data type)
+
+import numpy as np
+
+
+#  List vs NumPy Array
+a = [1, 2, 3]
+print("List * 3:", a * 3)  
+# Output: [1, 2, 3, 1, 2, 3, 1, 2, 3]  (list repeats)
+
+b = np.array(a)
+print("Array * 3:", b * 3)  
+# Output: [3 6 9]  (element-wise multiplication)
+
+
+#  Creating 2D Array
+a = [[1,2,3],[4,5,6],[7,8,9]]
+b = np.array(a)
+
+print("Array:\n", b)
+# Output:
+# [[1 2 3]
+#  [4 5 6]
+#  [7 8 9]]
+
+
+#  Attributes of Array
+print("Shape:", b.shape)      
+# Output: (3, 3) → 3 rows, 3 columns
+
+print("Size:", b.size)        
+# Output: 9 → total elements
+
+print("Dimension:", b.ndim)   
+# Output: 2 → 2D array
+
+
+#  Pre-built Function: zeros()
+a = np.zeros(3)
+print("Zeros (1D):", a)
+# Output: [0. 0. 0.]
+
+a = np.zeros((3,4))
+print("Zeros (2D):\n", a)
+# Output:
+# [[0. 0. 0. 0.]
+#  [0. 0. 0. 0.]
+#  [0. 0. 0. 0.]]
+
+
+#  Pre-built Function: ones()
+a = np.ones(4)
+print("Ones (1D):", a)
+# Output: [1. 1. 1. 1.]
+
+b = np.ones((2,3))
+print("Ones (2D):\n", b)
+# Output:
+# [[1. 1. 1.]
+#  [1. 1. 1.]]
+
+
+#  Another Example
+a = ([1,2,3,4,5,6],
+     [1,2,3,4,5,6],
+     [1,2,3,4,5,6],
+     [1,2,3,4,5,6],
+     [1,2,3,4,5,6])
+
+b = np.array(a)
+
+print("Shape:", b.shape)     
+# Output: (5, 6)
+
+print("Size:", b.size)       
+# Output: 30
+
+print("Dimension:", b.ndim)  
+# Output: 2
